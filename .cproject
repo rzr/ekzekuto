@@ -42,7 +42,7 @@
 									<listOptionValue builtIn="false" value="-mthumb"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.include.paths.270271523" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ekzekuto/ekzekuto/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="../ekzekuto/ekzekuto/inc"/>
 									<listOptionValue builtIn="false" value="/home/philippe/tizen-sdk/platforms/tizen-2.3.1/mobile/rootstraps/mobile-2.3.1-device.core/usr/include/libxml2"/>
 									<listOptionValue builtIn="false" value="/home/philippe/tizen-sdk/platforms/tizen-2.3.1/mobile/rootstraps/mobile-2.3.1-device.core/usr/include"/>
 									<listOptionValue builtIn="false" value="/home/philippe/tizen-sdk/platforms/tizen-2.3.1/mobile/rootstraps/mobile-2.3.1-device.core/usr/include/appcore-agent"/>
@@ -118,7 +118,7 @@
 									<listOptionValue builtIn="false" value="-mthumb"/>
 								</option>
 								<option id="gnu.c.compiler.option.include.paths.653250289" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ekzekuto/ekzekuto/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="../ekzekuto/ekzekuto/inc"/>
 									<listOptionValue builtIn="false" value="/home/philippe/tizen-sdk/platforms/tizen-2.3.1/mobile/rootstraps/mobile-2.3.1-device.core/usr/include/libxml2"/>
 									<listOptionValue builtIn="false" value="/home/philippe/tizen-sdk/platforms/tizen-2.3.1/mobile/rootstraps/mobile-2.3.1-device.core/usr/include"/>
 									<listOptionValue builtIn="false" value="/home/philippe/tizen-sdk/platforms/tizen-2.3.1/mobile/rootstraps/mobile-2.3.1-device.core/usr/include/appcore-agent"/>
@@ -191,15 +191,15 @@
 									<listOptionValue builtIn="false" value="-L&quot;${SBI_SYSROOT}/usr/lib&quot;"/>
 									<listOptionValue builtIn="false" value="$(RS_LIBRARIES)"/>
 								</option>
-								<option id="gnu.cpp.link.option.paths.1846719007" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths"/>
+								<option id="gnu.cpp.link.option.paths.1846719007" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1390983350" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
 								</inputType>
 							</tool>
 							<tool command="arm-linux-gnueabi-as" id="org.tizen.nativeapp.tool.sbi.gnu.assembler.base.1521953212" name="Assembler" superClass="org.tizen.nativeapp.tool.sbi.gnu.assembler.base">
-								<option id="gnu.both.asm.option.include.paths.1704115540" superClass="gnu.both.asm.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ekzekuto/ekzekuto/inc}&quot;"/>
+								<option id="gnu.both.asm.option.include.paths.1704115540" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="../ekzekuto/ekzekuto/inc"/>
 									<listOptionValue builtIn="false" value="/home/philippe/tizen-sdk/platforms/tizen-2.3.1/mobile/rootstraps/mobile-2.3.1-device.core/usr/include/libxml2"/>
 									<listOptionValue builtIn="false" value="/home/philippe/tizen-sdk/platforms/tizen-2.3.1/mobile/rootstraps/mobile-2.3.1-device.core/usr/include"/>
 									<listOptionValue builtIn="false" value="/home/philippe/tizen-sdk/platforms/tizen-2.3.1/mobile/rootstraps/mobile-2.3.1-device.core/usr/include/appcore-agent"/>
@@ -267,7 +267,6 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="inc"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="shared"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
 					</sourceEntries>
@@ -481,7 +480,6 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="inc"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="shared"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
 					</sourceEntries>
