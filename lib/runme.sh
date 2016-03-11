@@ -14,6 +14,8 @@ main_()
     log_ date
     log_ cat /proc/version
     log_ cat /proc/uptime
+    log_ df -h
+    log_ /sbin/ifconfig
     echo "# ${PKG_NAME}: } stopping"
 }
 
