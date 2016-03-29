@@ -33,3 +33,4 @@ server
 tmp
 /Debug
 /Release
+/res
