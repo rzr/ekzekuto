@@ -16,11 +16,16 @@ all?= \
  shared/res/main.png \
  #eol
 
-
 sdb?=${HOME}/tizen-sdk/tools/sdb
 developer_destdir?=/opt/usr/apps/tmp/${package}-tmp
+tpk_file?=$(shell ls Release/*.tpk)
 
 all: ${all}
+
+check: ${tpk_file}
+	unzip -t $<
+	ls -l ${CURDIR}/${<}
+	md5sum ${CURDIR}/${<}
 
 shared/res/main.png: icon.png
 #	./shared/res/main.png: PNG image data, 117 x 117, 8-bit/color RGBA, non-interlaced
@@ -47,11 +52,14 @@ tmp/480x854/%.png: docs/%.png
 	mkdir -p ${@D}
 	convert -resize '480x854!' $< $@
 
-distclean: clean
-	rm -f *.wgt
-
 clean:
-	rm -f *~
+	rm -f *~ .*~
+
+cleanall:
+	rm -rf Debug Release SA_Report tmp crash-info
+
+distclean: clean cleanall
+	rm -f *.wgt
 
 deploy: ./Debug/${package}-${version}-arm.tpk
 	${sdb} install $<
