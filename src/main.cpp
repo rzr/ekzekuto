@@ -18,42 +18,45 @@ typedef struct appdata {
 	int position_bottom;
 } appdata_s;
 
-static char const * const g_usage_text = "Ekzekuto : Basic process luncher"
+static char const * const g_usage_text = ""
+		"<b>"
+		"EKZEKUTO: Simple process launcher"
+		"</b>"
 		"<br/><br/>"
+		"<i>URL:</i> https://quitter.is/tizenhelper"
+		"<br/>"
+		"<i>Licence:</i> Apache-2.0 (https://spdx.org/licenses/Apache-2.0)"
+		"<br/>"
+		"<br/><i>"
 		"Description:"
-		"<br/>"
-		"Minimal terminal to execute command and display output."
-		"<br/><br/>"
+		"</i><br/>"
+		"Minimal terminal to <b>execute commands</b> and display their output."
+		"<br/><br/><i>"
 		"Usage:"
-		"<br/>"
-		"Edit bottom command line and press \"<b>Execute</b>\" button."
-		"<br/>"
-		"Then the upper main window will be replaced with process's output."
+		"</i><br/>"
+		"Edit bottom command line and press \"<b>Execute</b>\" button, "
+		"then the upper main window will be replaced with process's output."
 		"<br/>"
 		"Also as demonstration a simple script shell can be tested (runme.sh)."
 		"<br/>"
 		"but it can be replaced by any unix command available on system:"
 		"<br/>"
 		"(ls, find, pwd, cat, grep ...)"
-		"<br/><br/>"
+		"<br/><br/><i>"
 		"Notes:"
-		"<br/>"
+		"</i><br/>"
 		"This tool is intended to advanced users who want to use Unix/Shell capabilities of platform."
 		"<br/>"
 		"Double tap to disable scrolling of current page."
 		"<br/>"
 		"Unfortunately there is no fixed width fonts available on Tizen platform."
 		"<br/><br/>"
-		"Keywords: terminal, exec, execute, shell, console, cli, system, bash, sh"
-		"<br/><br/>"
-		"URL: https://quitter.is/tizenhelper"
-		"<br/>Copyleft: Apache-2.0<br/>"
 		;
 
 static char const * const g_command =
 // "date"
-		"/opt/usr/apps/org.example.ekzekuto/lib/runme.sh"
-//
+		"/opt/usr/apps/" PACKAGE "/lib/runme.sh"
+//		"/opt/usr/media/Others/runme.sh" // sdb push script as developer user
 ;
 appdata_s * g_appdata = 0; //TODO
 
@@ -65,6 +68,7 @@ static int printlog(char* message) {
 		elm_entry_entry_append(g_appdata->output, "<br/>");
 		ecore_thread_main_loop_end();
 	}
+	return 0;
 }
 
 static int quit(char const * const message) {
