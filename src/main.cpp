@@ -52,8 +52,8 @@ static char const * const g_usage_text = "Ekzekuto : Basic process luncher"
 
 static char const * const g_command =
 // "date"
-		"/opt/usr/apps/org.example.ekzekuto/lib/runme.sh"
-//
+		"/opt/usr/apps/" PACKAGE "/lib/runme.sh"
+//		"/opt/usr/media/Others/runme.sh" // sdb push script as developer user
 ;
 appdata_s * g_appdata = 0; //TODO
 
@@ -65,6 +65,7 @@ static int printlog(char* message) {
 		elm_entry_entry_append(g_appdata->output, "<br/>");
 		ecore_thread_main_loop_end();
 	}
+	return 0;
 }
 
 static int quit(char const * const message) {
