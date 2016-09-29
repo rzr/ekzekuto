@@ -51,8 +51,8 @@ static char const * const g_usage_text = "Ekzekuto : Basic process luncher"
 		;
 
 static char const * const g_command =
-// "date"
-		"/opt/usr/apps/" PACKAGE "/lib/runme.sh"
+ "date"
+//		"/opt/usr/apps/" PACKAGE "/lib/runme.sh"
 //		"/opt/usr/media/Others/runme.sh" // sdb push script as developer user
 ;
 appdata_s * g_appdata = 0; //TODO
@@ -295,6 +295,32 @@ static void create_base_gui(appdata_s *ad) {
 
 	elm_object_content_set(ad->conform, box);
 
+
+	{
+			Evas_Object *edit = ad->input = elm_entry_add(box);
+			elm_entry_single_line_set(edit, EINA_FALSE);
+			elm_entry_line_wrap_set(edit, ELM_WRAP_WORD);
+			elm_entry_entry_set(edit, g_command);
+
+			evas_object_size_hint_weight_set(edit, EVAS_HINT_EXPAND, 0);
+			evas_object_size_hint_align_set(edit, EVAS_HINT_FILL, EVAS_HINT_FILL);
+
+			elm_box_pack_end(box, edit);
+			evas_object_show(edit);
+		}
+	{
+		char const * const text = "Execute !";
+		Evas_Object *button = ad->eval = elm_button_add(box);
+
+		evas_object_size_hint_weight_set(button, EVAS_HINT_EXPAND, 0);
+		evas_object_size_hint_align_set(button, EVAS_HINT_FILL, EVAS_HINT_FILL);
+
+		elm_object_text_set(button, text);
+		evas_object_smart_callback_add(button, "clicked", eval_cb, ad);
+
+		elm_box_pack_end(box, button);
+		evas_object_show(button);
+	}
 	{
 		Evas_Object* edit = ad->output = elm_entry_add(box);
 		elm_entry_single_line_set(edit, EINA_FALSE);
@@ -311,31 +337,10 @@ static void create_base_gui(appdata_s *ad) {
 		elm_box_pack_end(box, edit);
 		evas_object_show(edit);
 	}
-	{
-		char const * const text = "Execute !";
-		Evas_Object *button = ad->eval = elm_button_add(box);
-
-		evas_object_size_hint_weight_set(button, EVAS_HINT_EXPAND, 0);
-		evas_object_size_hint_align_set(button, EVAS_HINT_FILL, EVAS_HINT_FILL);
-
-		elm_object_text_set(button, text);
-		evas_object_smart_callback_add(button, "clicked", eval_cb, ad);
-
-		elm_box_pack_end(box, button);
-		evas_object_show(button);
+	if (false) {
+		ad->output = ad->input; // hack for wearable
 	}
-	{
-		Evas_Object *edit = ad->input = elm_entry_add(box);
-		elm_entry_single_line_set(edit, EINA_FALSE);
-		elm_entry_line_wrap_set(edit, ELM_WRAP_WORD);
-		elm_entry_entry_set(edit, g_command);
-
-		evas_object_size_hint_weight_set(edit, EVAS_HINT_EXPAND, 0);
-		evas_object_size_hint_align_set(edit, EVAS_HINT_FILL, EVAS_HINT_FILL);
-
-		elm_box_pack_end(box, edit);
-		evas_object_show(edit);
-	}
+	if (false)
 	{
 		char const * const text = "Exit !";
 		Evas_Object *button = elm_button_add(box);
