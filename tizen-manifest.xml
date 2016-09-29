@@ -9,10 +9,7 @@
     </ui-application>
     <privileges>
         <privilege>http://tizen.org/privilege/download</privilege>
-        <privilege>http://tizen.org/privilege/systemmonitor</privilege>
-        <privilege>http://tizen.org/privilege/window.priority.set</privilege>
         <privilege>http://tizen.org/privilege/network.set</privilege>
-        <privilege>http://tizen.org/privilege/account.read</privilege>
         <privilege>http://tizen.org/privilege/datasharing</privilege>
         <privilege>http://tizen.org/privilege/externalstorage</privilege>
         <privilege>http://tizen.org/privilege/mediastorage</privilege>
