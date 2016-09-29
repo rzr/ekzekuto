@@ -16,6 +16,8 @@ main_()
     log_ cat /proc/uptime
     log_ df -h
     log_ /sbin/ifconfig
+    file="/opt/usr/media/Others/runme.sh"
+    [ ! -x "$file" ] || log_ "$file"
     echo "# ${PKG_NAME}: } stopping"
 }
 
