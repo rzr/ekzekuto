@@ -5,8 +5,8 @@ Author: https://wiki.tizen.org/wiki/User:Pcoval
 License: Apache-2.0
 License-URL: https://spdx.org/licenses/Apache-2.0
 Contact: rzr@gna.org
-Keywords: terminal, exec, execute, shell, console, cli, system, bash, sh
-Usage: Edit command line and press Evaluate button
+Keywords: terminal, exec, execute, shell, console, process, cli, system, bash, sh
+Usage: Edit command line and press Execute button
 Notes:
 
   Minimal terminal to execute systems commands or Shell scripts snippets.
@@ -27,20 +27,31 @@ Notes:
   Developers can find this very useful to introspect
    their devices in an 'app' context.
 
-  Currently it's rejected from TizenStore as reviewer
-   is 'Unable to understand functionality of app'.
+  Currently it's published in TizenStore,
+  and was sucessfully installed on Tizen Z1 running Tizen:2.4:Mobile.
 
-  Now, I am wondering if a full functional terminal
-   like EFL's terminology could be accepted to tizenstore.com.
-
-  There is no fixed width fonts available on platform.
+  This is encouraging for other developers to put efforts
+   into a full functional terminal
+   like EFL's terminology or its fork Terminal3,
+   they could be accepted to tizenstore.com too.
 
   Rebuild app from scratch using tizen-studio 1.0.
 
   You can also adapt it to ship your own CLI software, like:
 
-  https://vimeo.com/161074400 iotivity-tizen-z1-gears-20160331
+  https://youtu.be/dhIdxdhnd1U iotivity-tizen-z1-gears-20160331
 
   Contributions are welcome, as it's FLOSS.
 
   Enjoy
+
+
+TODO:
+
+  - There is no fixed width fonts available on platform
+  - Provide a nice SVG icon
+  - Manage stderr
+  - Stress app and fix deadlocks if any
+  - Port to other profiles, Tizen:2.3.1:Wearable for instance
+  - Save scriptlets, in a 'bookmark' list
+  - Add items in TODO
