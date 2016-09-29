@@ -27,13 +27,13 @@ Notes:
   Developers can find this very useful to introspect
    their devices in an 'app' context.
 
-  Currently it's rejected from TizenStore as reviewer
-   is 'Unable to understand functionality of app'.
+  Currently it's published in TizenStore,
+  and was sucessfully installed on Tizen Z1 running Tizen:2.4:Mobile.
 
-  Now, I am wondering if a full functional terminal
-   like EFL's terminology could be accepted to tizenstore.com.
-
-  There is no fixed width fonts available on platform.
+  This is encouraging for other developers to put efforts
+   into a full functional terminal
+   like EFL's terminology or its fork Terminal3,
+   they could be accepted to tizenstore.com too.
 
   Rebuild app from scratch using tizen-studio 1.0.
 
@@ -44,3 +44,13 @@ Notes:
   Contributions are welcome, as it's FLOSS.
 
   Enjoy
+
+  TODO:
+
+  - There is no fixed width fonts available on platform
+  - Provide a nice SVG icon
+  - Manage stderr
+  - Stress app and fix deadlocks if any
+  - Port to other profiles, Tizen:2.3.1:Wearable for instance
+  - Save scriptlets, in a "bookmark" list
+  - Add items in TODO
