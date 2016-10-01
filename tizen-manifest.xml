@@ -3,12 +3,7 @@
     <author email="rzr@gna.org" href="https://wiki.tizen.org/wiki/User:Pcoval">Philippe Coval</author>
     <description>Minimal terminal to execute command and display output.</description>
     <profile name="mobile"/>
-    <ui-application appid="org.example.ekzekuto" 
-exec="/usr/apps/org.example.ekzekuto/bin/ekzekuto"
-launch_mode="single" multiple="false" nodisplay="false" taskmanage="true" type="capp"
-
-
->
+    <ui-application appid="org.example.ekzekuto" exec="ekzekuto" launch_mode="single" multiple="false" nodisplay="false" taskmanage="true" type="capp">
         <label>Ekzekuto</label>
         <icon>main.png</icon>
     </ui-application>
