@@ -3,8 +3,8 @@
 
 #include <app.h>
 #include <Elementary.h>
-#include <system_settings.h>
-#include <efl_extension.h>
+#include <system/system_settings.h>
+#include <efl-extension/efl_extension.h>
 #include <dlog.h>
 
 #ifdef  LOG_TAG
