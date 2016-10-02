@@ -12,6 +12,10 @@ Group: tizen/Application
 
 %define prefix /usr/apps/%{name}
 
+%if ! %{?license:0}
+%define license %doc
+%endif
+
 BuildRequires: cmake
 BuildRequires: embryo-bin
 BuildRequires: gettext-tools
