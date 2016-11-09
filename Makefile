@@ -6,7 +6,7 @@ main?=ekzekuto
 package?=org.example.${main}
 package?=main
 log_tag?=${main}
-version?=1.0.0
+version?=1.0.1
 
 all?= \
  icon.png \
