@@ -55,7 +55,7 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root,-)
 %attr(-,inhouse,inhouse)
-%license LICENCE
+%license LICENSE
 %manifest %{name}.manifest
 %{_datadir}/packages/%{name}.xml
 %{prefix}/bin/%{appname}
