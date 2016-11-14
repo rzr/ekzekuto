@@ -1,7 +1,7 @@
 %define appname ekzekuto
 
 Name: org.example.ekzekuto
-Version: 1.0.1
+Version: 1.0.2
 Release: 0
 Summary: Ekzekuto application
 URL: http://github.com/rzr/ekzekuto
